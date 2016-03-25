@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+  <constant name="struts.dvMode" value="true"/>
+  <package name="default" extends="struts-default" namespace="/">
+       <action name="custaction" class="sh_pro.action.CustomerAction" method="addCust">
+           <result name="success">pages/Customer.jsp</result>
+       </action>
+       
+       <action name="listCust" class="sh_pro.action.CustomerAction" method="listCust">
+       
+            <result name="success">pages/Customer.jsp</result>
+       </action>
+  </package>
+    
+</struts>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="sh_pro.model.Customer" table="customer">
+        <id name="cust_id" type="java.lang.Long" >
+            <column name="cust_id" >
+                <comment>客户编号</comment>
+            </column>
+            <generator class="native"/>
+        </id>
+        
+        <property name="cust_name" type="java.lang.String">
+            <column name="cust_name" not-null="true">
+               <comment>客户名称</comment>
+            </column>
+        </property>
+        
+        <property name="cust_addr" type="java.lang.String">
+            <column name="cust_addr" not-null="true">
+                <comment>客户地址</comment>
+            </column>
+        </property>
+        
+        <property name="create_date" type="timestamp">
+           <column name="create_date" length="19" not-null="true">
+               <comment>客户日期</comment>
+           </column>
+        </property>
+        
+    </class>
+
+</hibernate-mapping>
